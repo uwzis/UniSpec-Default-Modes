@@ -1,0 +1,39 @@
+[package]
+name = "roadmap-mode"
+description = "Full-cycle development with roadmap, testing, debugging, and build stages"
+repo_url = "https://github.com/uwzis/unispec-modes"
+license = "MIT"
+author = "UniSpec Community"
+version = "1.0.0"
+
+[mode]
+name = "roadmap"
+display_name = "Roadmap Mode"
+description = """
+Full-cycle development workflow with integrated testing and debugging loops.
+
+Workflow:
+1. Roadmap (plan and prioritize)
+2. Spec (write specifications)
+3. Testing (write and run tests)
+4. Debugging (fix test failures)
+5. Build (ship it)
+
+The testing/debugging loop continues until all tests pass.
+"""
+
+[areas]
+default = ["Roadmap", "Spec", "Testing", "Debugging", "Build"]
+protected = ["Build"]
+
+[capabilities]
+spec_writing = true
+building = true
+verification = true
+connectors = true
+custom_workflows = true
+
+[settings]
+default_area = "Spec"
+auto_index = true
+testing_required = true

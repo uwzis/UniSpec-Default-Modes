@@ -1,0 +1,37 @@
+[package]
+name = "reverse-mode"
+description = "Ingest codebase, generate specs, and link everything. Code → Ingest → Spec workflow."
+repo_url = "https://github.com/uwzis/unispec-modes"
+license = "MIT"
+author = "UniSpec Community"
+version = "1.0.0"
+
+[mode]
+name = "reverse"
+display_name = "Reverse Mode"
+description = """
+Reverse engineer existing codebases into detailed specifications.
+
+Workflow:
+1. Code - Import files as topics for planning
+2. Ingest - Create specs and link to code
+3. Spec - Finalize and complete specs
+
+This mode helps you understand and document legacy codebases.
+"""
+
+[areas]
+default = ["Code", "Ingest", "Spec"]
+protected = []
+
+[capabilities]
+spec_writing = true
+building = true
+verification = true
+connectors = true
+custom_workflows = true
+
+[settings]
+default_area = "Code"
+auto_index = true
+code_analysis = true
